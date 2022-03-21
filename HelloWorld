@@ -2,7 +2,5 @@
 
 void hello_main(){
   printf("Hello world");
-  pritnf("woooo!");
-  pritnf("woooo2!");
 
 }
