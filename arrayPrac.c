@@ -17,13 +17,13 @@
 
 void initCardArray();				//카드 지도 배열 -1으로 초기화
 void initCardNames();				//카드 이름 배열 초기화
-void shuffleCade();					//랜덤으로 카드 이름을 카드 지도와 연결
+void shuffleCade();				//랜덤으로 카드 이름을 카드 지도와 연결
 int getEmptyposition();				//배열의 요소가 초기화된 상태면 범위내 랜덤한 정수, 아니면 0 반환
-int conv_position_x(int position);	//카드 지도의 정수값을 몇 행인지 반환
-int conv_position_y(int position);	//카드 지도의 정수값을 몇 열인지 반환
-void printCards();					//테스트용 정답 출력
+int conv_position_x(int position);		//카드 지도의 정수값을 몇 행인지 반환
+int conv_position_y(int position);		//카드 지도의 정수값을 몇 열인지 반환
+void printCards();				//테스트용 정답 출력
 void printQuestion();				//플레이어가 보는 문제 출력
-int foundAllCard();					//모든 카드가 맞춰졌으면 0, 아니면 1 반환
+int foundAllCard();				//모든 카드가 맞춰졌으면 0, 아니면 1 반환
 
 
 int arrayCard[col][low];	//카드 지도 배열
