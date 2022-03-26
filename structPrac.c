@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <time.h>
-
 //구조체 연습
 
 //5마리 고양이
@@ -9,6 +6,9 @@
 
 //고양이 구조체 
 //이름 나이 성격 키우기난이도 
+
+#include <stdio.h>
+#include <time.h>
 
 typedef struct {
     char* name;
