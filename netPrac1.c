@@ -1,4 +1,5 @@
-//네트워크 프로그래밍 연습 1
+//네트워크 프로그래밍 연습 
+
 //클라이언트 화면 구성
 //학생부 만들기
 
@@ -19,6 +20,46 @@ typedef struct node {
 	int age;		//나이 변수
 	char gender;	//성별 변수
 }node;
+
+int printMenu();	//메뉴 출력 함수
+void insertPersonalInformation(node** head);	//개별 신상 정보 입력 함수
+void printallinformation(node** head);	//전체 신상 정보 출력 함수
+void deletePersonalInformation(node** head);	//개별 신상 정보 삭제 함수
+void searchPersonalInformation(node** head);	//개별 신상 정보 조회 함수
+
+int main() {
+
+	node* head = NULL;	//헤드 노드 초기화
+
+	while (TRUE) {
+		int num = printMenu();	//메뉴 출력 함수
+		system("clear");		//화면 초기화
+
+		switch (num) {
+		case 1:
+			//(1) 선택시, 개별 신상 정보 입력
+			insertPersonalInformation(&head);
+			break;
+		case 2:
+			//(2) 선택시,전체 신상 정보 출력 
+			printallinformation(&head);
+			break;
+		case 3:
+			//(3) 선택시,개별 신상 정보 조회 
+			searchPersonalInformation(&head);
+			break;
+		case 4:
+			//(4) 선택시,개별 신상 정보 삭제 
+			deletePersonalInformation(&head);
+			break;
+		case 5:
+			//(5) 선택시, 프로그램 종료
+			printf("[프로그램 종료]\n");
+			return 0;
+		}
+	}
+	return 0;
+}
 
 //메뉴 출력 함수 
 int printMenu() {
@@ -275,36 +316,3 @@ void searchPersonalInformation(node** head) {
 	return;
 }
 
-int main() {
-
-	node* head = NULL;	//헤드 노드 초기화
-
-	while (TRUE) {
-		int num = printMenu();	//메뉴 출력 함수
-		system("clear");		//화면 초기화
-
-		switch (num) {
-		case 1:
-			//(1) 선택시, 개별 신상 정보 입력
-			insertPersonalInformation(&head);
-			break;
-		case 2:
-			//(2) 선택시,전체 신상 정보 출력 
-			printallinformation(&head);
-			break;
-		case 3:
-			//(3) 선택시,개별 신상 정보 조회 
-			searchPersonalInformation(&head);
-			break;
-		case 4:
-			//(4) 선택시,개별 신상 정보 삭제 
-			deletePersonalInformation(&head);
-			break;
-		case 5:
-			//(5) 선택시, 프로그램 종료
-			printf("[프로그램 종료]\n");
-			return 0;
-		}
-	}
-	return 0;
-}
