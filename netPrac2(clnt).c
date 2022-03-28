@@ -42,7 +42,7 @@ int main(int argc, char* argv[]) {
         error_handling("connect() error");
     }
 
-    str_len = read(sock, message, sizeof(message) - 1);  //서버로부터 데이터 전송받아서 message에 저장
+    str_len = read(sock, message, sizeof(message) - 1);  //서버로부터 데이터 전송받아서 message에 저장, 성공시 수신한 바이트 수(단, EOF를 만나면 0), 실패시 -1
     if (str_len == -1) {
         error_handling("read() error");
     }

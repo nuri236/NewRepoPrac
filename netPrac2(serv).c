@@ -2,7 +2,7 @@
 //리눅스 기반
 
 //서버측
-//클라이언트의 요청을 받으면 "Hello World!" 출력
+//클라이언트의 요청을 받으면 "Hello World!" 전송
 
 #include <stdio.h>
 #include <string.h>
@@ -50,7 +50,7 @@ int main(int argc, char* argv[]) {
     }
 
     clnt_addr_size = sizeof(clnt_addr);
-    clnt_sock = accept(serv_sock, (struct sockaddr*)&clnt_addr, &clnt_addr_size);  //연결 요청 수락, 데이터 전송용 소켓 생성, 성공시 파일 디스크립터, 실패시 -1
+    clnt_sock = accept(serv_sock, (struct sockaddr*)&clnt_addr, &clnt_addr_size);  //연결 요청 수락, 데이터 전송용 소켓 생성, 세번째 인수에 주소값 주의, 성공시 파일 디스크립터, 실패시 -1
     if (clnt_sock == -1) {
         error_handling("listen() error");
     }
