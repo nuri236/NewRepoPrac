@@ -11,7 +11,7 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 
-#define MESSAGE_SIZE 30  //전송받을 문자열 길이
+#define BUF_SIZE 30  //한 번에 전송할 데이터 최대 길이
 
 void error_handling(char* message);
 
@@ -20,7 +20,7 @@ int main(int argc, char* argv[]) {
     int sock;  //클라이언트 소켓의 파일 디스크립터 저장
 
     struct sockaddr_in serv_addr;  //서버 주소 정보
-    char message[MESSAGE_SIZE];  //전달받은 데이터 저장
+    char message[BUF_SIZE];  //전달받은 데이터 저장
     int str_len;  //전달받을 데이터 길이 저장
 
     if (argc != 3) {

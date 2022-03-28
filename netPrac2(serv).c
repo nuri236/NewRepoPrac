@@ -52,7 +52,7 @@ int main(int argc, char* argv[]) {
     clnt_addr_size = sizeof(clnt_addr);
     clnt_sock = accept(serv_sock, (struct sockaddr*)&clnt_addr, &clnt_addr_size);  //연결 요청 수락, 데이터 전송용 소켓 생성, 세번째 인수에 주소값 주의, 성공시 파일 디스크립터, 실패시 -1
     if (clnt_sock == -1) {
-        error_handling("listen() error");
+        error_handling("accept() error");
     }
 
     write(clnt_sock, message, sizeof(message));  //클라이언트로 데이터 전송
