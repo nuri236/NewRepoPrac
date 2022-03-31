@@ -1,6 +1,8 @@
 //네트워크 프로그래밍
 //윈도우 소켓 연습
 
+//서버 측
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <winsock2.h>
